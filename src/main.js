@@ -1,11 +1,7 @@
-const express = require("express");
+import { web } from "./application/web.js"
 
-const app = express();
 const PORT = process.env.PORT || 3000
 
-app.use(express.json());
-app.listen(PORT,() =>{
+web.listen(PORT,() =>{
     console.log("Server started on port"+PORT)
 })
-
-module.export = app
